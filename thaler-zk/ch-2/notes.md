@@ -10,13 +10,13 @@ This algorithm is suitable for cooperative parties which trust each other but wa
 
     *   Call this vector a
 
-    *   Think of a~~n~~ as the coefficients of a polynomial of degree n-1
+    *   Think of a<sub>n</sub> as the coefficients of a polynomial of degree n-1
 
-*   Define the **Field** F~~p~~ as the set of integers modulo p
+*   Define the **Field** F<sub>p</sub> as the set of integers modulo p
 
-*   We then call the family of hash functions *H* the set of all functions which evaluate the output of our polynomial for the different values of r E F~~p~~
+*   We then call the family of hash functions *H* the set of all functions which evaluate the output of our polynomial for the different values of r E F<sub>p</sub>
 
-*   If Alice and Bob want to evaluate if 2 files are the same, Alice selects r at random, evaluates H~~r~~(a) `(evaluates the polynomial with coefficients a at x=r)`, then sends r and H~~r~~(a) to Bob who can use r to compute the same on his file and compare the result.
+*   If Alice and Bob want to evaluate if 2 files are the same, Alice selects r at random, evaluates H<sub>r</sub>(a) `(evaluates the polynomial with coefficients a at x=r)`, then sends r and H<sub>r</sub>(a) to Bob who can use r to compute the same on his file and compare the result.
 
 *   The algorithm has an error term of 1 - ((n-1) / p) | given p > n^2, we can say the error is < (1 - 1/n)
 
@@ -32,11 +32,11 @@ p = 11
 
 r (chosen at random) = 3
 
-Evaluation: 3(3)^2 + 1(3) + 2 = 27 + 3 + 2 = 32 % 11 = 10 = H~~3~~(a)
+Evaluation: 3(3)^2 + 1(3) + 2 = 27 + 3 + 2 = 32 % 11 = 10 = H<sub>3</sub>(a)
 
 Different message: BAC
 
 b: \[2, 1,  3]
 
-Evaluation: 2(3)^2 + 1(3) + 3 = 18 + 3 + 3 = 24 % 11 = 2 = H~~3~~(b)
+Evaluation: 2(3)^2 + 1(3) + 3 = 18 + 3 + 3 = 24 % 11 = 2 = H<sub>3</sub>(b)
 
