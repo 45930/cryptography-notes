@@ -10,7 +10,7 @@ This algorithm is suitable for cooperative parties which trust each other but wa
 
     *   Call this vector a
 
-    *   Think of a<sub>n</sub> as the coefficients of a polynomial of degree n-1
+    *   Think of a as the coefficients of a polynomial of degree n-1
 
 *   Define the **Field** F<sub>p</sub> as the set of integers modulo p
 
